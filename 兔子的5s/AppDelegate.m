@@ -7,17 +7,61 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
+#import "MYViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+@synthesize    centralManager;
+@synthesize    discoveredPeripheral;
+@synthesize    selectedCBService;
+@synthesize    selecedCBCharacteristic;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    RootViewController *rootView = [[RootViewController alloc] init];
+//    self.navController = [[UINavigationController alloc] init];
+//    //否则报错
+//    self.window.rootViewController=self.navController;
+//    
+//  // [self.navController pushViewController:ble animated:YES];
+//    [self.navController pushViewController:rootView animated:YES];
+//    [self.window addSubview:self.navController.view];
+//    [self.window makeKeyAndVisible];
+//    return YES;
+    
+    
+    // 创建程序窗口
+    self.window = [[UIWindow alloc] initWithFrame:
+                   [[UIScreen mainScreen] bounds]];
+    // 创建UITabBarController
+    self.tabBarController = [[UITabBarController alloc] init];
+    //创建导航控制器
+     self.navController = [[UINavigationController alloc] init];
+    //创建rootview
+    RootViewController *rootView = [[RootViewController alloc] init];
+    [self.navController pushViewController:rootView animated:YES];
+
+    // 创建FKViewController对象
+    MYViewController* viewController = [[MYViewController alloc]
+                                        initWithNibName:@"MYViewController" bundle:nil];
+    // 为UITabBarController设置多个视图控制器
+    // 如果希望UITabBarController显示几个Tab页，
+    // 就为UITabBarController添加几个视图控制器
+    self.tabBarController.viewControllers = [NSArray
+                                             arrayWithObjects:self.navController
+                                             , viewController, nil];
+    // 将UITabBarController设置为窗口的根控制器
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

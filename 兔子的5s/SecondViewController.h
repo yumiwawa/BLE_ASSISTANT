@@ -10,4 +10,8 @@
 
 @interface SecondViewController : UIViewController
 
+@property (strong,nonatomic) NSMutableArray * cbserviceList;
+@property (strong, nonatomic) IBOutlet UITableView *mySecondTableView;
+@property(nonatomic,retain)NSString *type;
+
 @end

@@ -1,19 +1,58 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="mySecondTableView" destination="twl-lS-W2U" id="hrq-Bg-1hu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="xBm-An-w4q"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="twl-lS-W2U">
+                    <rect key="frame" x="4" y="10" width="367" height="657"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="a4D-ZD-708"/>
+                        <outlet property="delegate" destination="-1" id="4Rr-gN-D3Z"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="twl-lS-W2U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="4" id="8mR-un-Rce"/>
+                <constraint firstItem="twl-lS-W2U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="PIx-dt-b3c"/>
+                <constraint firstAttribute="bottom" secondItem="twl-lS-W2U" secondAttribute="bottom" id="aOl-QZ-cnA"/>
+                <constraint firstItem="twl-lS-W2U" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dql-ym-BDQ"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="8mR-un-Rce"/>
+                    <exclude reference="PIx-dt-b3c"/>
+                    <exclude reference="aOl-QZ-cnA"/>
+                    <exclude reference="dql-ym-BDQ"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="8mR-un-Rce"/>
+                    <include reference="PIx-dt-b3c"/>
+                    <include reference="aOl-QZ-cnA"/>
+                    <include reference="dql-ym-BDQ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="159" y="278"/>
         </view>
     </objects>
 </document>

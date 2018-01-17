@@ -9,11 +9,28 @@
 /* Begin PBXBuildFile section */
 		83466B4519E80CDD00566B8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B4419E80CDD00566B8C /* main.m */; };
 		83466B4819E80CDD00566B8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B4719E80CDD00566B8C /* AppDelegate.m */; };
-		83466B4B19E80CDD00566B8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B4A19E80CDD00566B8C /* ViewController.m */; };
 		83466B4E19E80CDD00566B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83466B4C19E80CDD00566B8C /* Main.storyboard */; };
 		83466B5019E80CDD00566B8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83466B4F19E80CDD00566B8C /* Images.xcassets */; };
 		83466B5319E80CDD00566B8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83466B5119E80CDD00566B8C /* LaunchScreen.xib */; };
 		83466B5F19E80CDD00566B8C /* ___5sTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B5E19E80CDD00566B8C /* ___5sTests.m */; };
+		83466B7819E814D500566B8C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B7719E814D500566B8C /* RootViewController.m */; };
+		83466B8019F5484D00566B8C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B7E19F5484D00566B8C /* SecondViewController.m */; };
+		83466B8119F5484D00566B8C /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83466B7F19F5484D00566B8C /* SecondViewController.xib */; };
+		83466B8519F6C28D00566B8C /* ThridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B8319F6C28D00566B8C /* ThridViewController.m */; };
+		8355ADAF1C23276800BA77EA /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8355ADAE1C23276800BA77EA /* Images-2.xcassets */; };
+		839986F81A2B115E003BEA3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839986F71A2B115E003BEA3C /* ViewController.m */; };
+		83AA536C1B8B3CF000588024 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AA536A1B8B3CF000588024 /* ReadViewController.m */; };
+		83AA536D1B8B3CF000588024 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA536B1B8B3CF000588024 /* ReadViewController.xib */; };
+		83AA53741B8C972C00588024 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA53721B8C972C00588024 /* RootViewController.xib */; };
+		83AA53751B8C972C00588024 /* ThridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA53731B8C972C00588024 /* ThridViewController.xib */; };
+		83AA53791B8C981800588024 /* RWNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AA53771B8C981800588024 /* RWNViewController.m */; };
+		83AA537A1B8C981800588024 /* RWNViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA53781B8C981800588024 /* RWNViewController.xib */; };
+		83AA537E1B8CB8D300588024 /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AA537C1B8CB8D300588024 /* WriteViewController.m */; };
+		83AA537F1B8CB8D300588024 /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA537D1B8CB8D300588024 /* WriteViewController.xib */; };
+		83C213B41C24694C0052A881 /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C213B21C24694C0052A881 /* MYViewController.m */; };
+		83C213B51C24694C0052A881 /* MYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C213B31C24694C0052A881 /* MYViewController.xib */; };
+		83C89A141A6FEE7B0001C2A6 /* ShowDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C89A121A6FEE7B0001C2A6 /* ShowDataViewController.m */; };
+		83C89A151A6FEE7B0001C2A6 /* ShowDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C89A131A6FEE7B0001C2A6 /* ShowDataViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +44,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		83466B3F19E80CDD00566B8C /* 兔子的5s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "兔子的5s.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83466B3F19E80CDD00566B8C /* BLE助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83466B4319E80CDD00566B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83466B4419E80CDD00566B8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83466B4619E80CDD00566B8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83466B4719E80CDD00566B8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		83466B4919E80CDD00566B8C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		83466B4A19E80CDD00566B8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		83466B4D19E80CDD00566B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83466B4F19E80CDD00566B8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83466B5219E80CDD00566B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		83466B5819E80CDD00566B8C /* 兔子的5sTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "兔子的5sTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83466B5D19E80CDD00566B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83466B5E19E80CDD00566B8C /* ___5sTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___5sTests.m"; sourceTree = "<group>"; };
+		83466B7619E814D500566B8C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		83466B7719E814D500566B8C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		83466B7D19F5484D00566B8C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		83466B7E19F5484D00566B8C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		83466B7F19F5484D00566B8C /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		83466B8219F6C28D00566B8C /* ThridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThridViewController.h; sourceTree = "<group>"; };
+		83466B8319F6C28D00566B8C /* ThridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThridViewController.m; sourceTree = "<group>"; };
+		8355ADAE1C23276800BA77EA /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		839986F61A2B115E003BEA3C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		839986F71A2B115E003BEA3C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		83AA53691B8B3CF000588024 /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
+		83AA536A1B8B3CF000588024 /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
+		83AA536B1B8B3CF000588024 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
+		83AA53721B8C972C00588024 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		83AA53731B8C972C00588024 /* ThridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThridViewController.xib; sourceTree = "<group>"; };
+		83AA53761B8C981800588024 /* RWNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWNViewController.h; sourceTree = "<group>"; };
+		83AA53771B8C981800588024 /* RWNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWNViewController.m; sourceTree = "<group>"; };
+		83AA53781B8C981800588024 /* RWNViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWNViewController.xib; sourceTree = "<group>"; };
+		83AA537B1B8CB8D300588024 /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
+		83AA537C1B8CB8D300588024 /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
+		83AA537D1B8CB8D300588024 /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
+		83C213B11C24694C0052A881 /* MYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
+		83C213B21C24694C0052A881 /* MYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
+		83C213B31C24694C0052A881 /* MYViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYViewController.xib; sourceTree = "<group>"; };
+		83C89A111A6FEE7B0001C2A6 /* ShowDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDataViewController.h; sourceTree = "<group>"; };
+		83C89A121A6FEE7B0001C2A6 /* ShowDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDataViewController.m; sourceTree = "<group>"; };
+		83C89A131A6FEE7B0001C2A6 /* ShowDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDataViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +114,7 @@
 		83466B4019E80CDD00566B8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83466B3F19E80CDD00566B8C /* 兔子的5s.app */,
+				83466B3F19E80CDD00566B8C /* BLE助手.app */,
 				83466B5819E80CDD00566B8C /* 兔子的5sTests.xctest */,
 			);
 			name = Products;
@@ -81,13 +123,12 @@
 		83466B4119E80CDD00566B8C /* 兔子的5s */ = {
 			isa = PBXGroup;
 			children = (
-				83466B4619E80CDD00566B8C /* AppDelegate.h */,
-				83466B4719E80CDD00566B8C /* AppDelegate.m */,
-				83466B4919E80CDD00566B8C /* ViewController.h */,
-				83466B4A19E80CDD00566B8C /* ViewController.m */,
+				83C213A91C2464610052A881 /* rabbit */,
+				83E9B0A91AD01F6400045E0F /* 刷新出服务特征 */,
 				83466B4C19E80CDD00566B8C /* Main.storyboard */,
 				83466B4F19E80CDD00566B8C /* Images.xcassets */,
 				83466B5119E80CDD00566B8C /* LaunchScreen.xib */,
+				8355ADAE1C23276800BA77EA /* Images-2.xcassets */,
 				83466B4219E80CDD00566B8C /* Supporting Files */,
 			);
 			path = "兔子的5s";
@@ -119,6 +160,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		83C213A91C2464610052A881 /* rabbit */ = {
+			isa = PBXGroup;
+			children = (
+				83C213B11C24694C0052A881 /* MYViewController.h */,
+				83C213B21C24694C0052A881 /* MYViewController.m */,
+				83C213B31C24694C0052A881 /* MYViewController.xib */,
+			);
+			name = rabbit;
+			sourceTree = "<group>";
+		};
+		83E9B0A91AD01F6400045E0F /* 刷新出服务特征 */ = {
+			isa = PBXGroup;
+			children = (
+				83466B4719E80CDD00566B8C /* AppDelegate.m */,
+				83466B4619E80CDD00566B8C /* AppDelegate.h */,
+				839986F61A2B115E003BEA3C /* ViewController.h */,
+				83AA53761B8C981800588024 /* RWNViewController.h */,
+				83AA537B1B8CB8D300588024 /* WriteViewController.h */,
+				83AA537C1B8CB8D300588024 /* WriteViewController.m */,
+				83AA537D1B8CB8D300588024 /* WriteViewController.xib */,
+				83AA53771B8C981800588024 /* RWNViewController.m */,
+				83AA53781B8C981800588024 /* RWNViewController.xib */,
+				839986F71A2B115E003BEA3C /* ViewController.m */,
+				83AA53721B8C972C00588024 /* RootViewController.xib */,
+				83AA53731B8C972C00588024 /* ThridViewController.xib */,
+				83466B7D19F5484D00566B8C /* SecondViewController.h */,
+				83466B7E19F5484D00566B8C /* SecondViewController.m */,
+				83AA53691B8B3CF000588024 /* ReadViewController.h */,
+				83AA536A1B8B3CF000588024 /* ReadViewController.m */,
+				83AA536B1B8B3CF000588024 /* ReadViewController.xib */,
+				83466B8219F6C28D00566B8C /* ThridViewController.h */,
+				83466B8319F6C28D00566B8C /* ThridViewController.m */,
+				83466B7F19F5484D00566B8C /* SecondViewController.xib */,
+				83466B7619E814D500566B8C /* RootViewController.h */,
+				83466B7719E814D500566B8C /* RootViewController.m */,
+				83C89A111A6FEE7B0001C2A6 /* ShowDataViewController.h */,
+				83C89A121A6FEE7B0001C2A6 /* ShowDataViewController.m */,
+				83C89A131A6FEE7B0001C2A6 /* ShowDataViewController.xib */,
+			);
+			name = "刷新出服务特征";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,7 +219,7 @@
 			);
 			name = "兔子的5s";
 			productName = "兔子的5s";
-			productReference = 83466B3F19E80CDD00566B8C /* 兔子的5s.app */;
+			productReference = 83466B3F19E80CDD00566B8C /* BLE助手.app */;
 			productType = "com.apple.product-type.application";
 		};
 		83466B5719E80CDD00566B8C /* 兔子的5sTests */ = {
@@ -163,14 +246,16 @@
 		83466B3719E80CDC00566B8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "张晓东";
 				TargetAttributes = {
 					83466B3E19E80CDD00566B8C = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = GQ3UYAW932;
 					};
 					83466B5719E80CDD00566B8C = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = GQ3UYAW932;
 						TestTargetID = 83466B3E19E80CDD00566B8C;
 					};
 				};
@@ -200,8 +285,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				83466B4E19E80CDD00566B8C /* Main.storyboard in Resources */,
+				83C213B51C24694C0052A881 /* MYViewController.xib in Resources */,
 				83466B5319E80CDD00566B8C /* LaunchScreen.xib in Resources */,
+				8355ADAF1C23276800BA77EA /* Images-2.xcassets in Resources */,
+				83AA53741B8C972C00588024 /* RootViewController.xib in Resources */,
+				83C89A151A6FEE7B0001C2A6 /* ShowDataViewController.xib in Resources */,
+				83AA536D1B8B3CF000588024 /* ReadViewController.xib in Resources */,
 				83466B5019E80CDD00566B8C /* Images.xcassets in Resources */,
+				83AA537A1B8C981800588024 /* RWNViewController.xib in Resources */,
+				83466B8119F5484D00566B8C /* SecondViewController.xib in Resources */,
+				83AA53751B8C972C00588024 /* ThridViewController.xib in Resources */,
+				83AA537F1B8CB8D300588024 /* WriteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83466B4B19E80CDD00566B8C /* ViewController.m in Sources */,
+				83AA536C1B8B3CF000588024 /* ReadViewController.m in Sources */,
+				839986F81A2B115E003BEA3C /* ViewController.m in Sources */,
+				83AA53791B8C981800588024 /* RWNViewController.m in Sources */,
+				83C89A141A6FEE7B0001C2A6 /* ShowDataViewController.m in Sources */,
+				83466B8519F6C28D00566B8C /* ThridViewController.m in Sources */,
+				83466B8019F5484D00566B8C /* SecondViewController.m in Sources */,
+				83C213B41C24694C0052A881 /* MYViewController.m in Sources */,
 				83466B4819E80CDD00566B8C /* AppDelegate.m in Sources */,
+				83466B7819E814D500566B8C /* RootViewController.m in Sources */,
+				83AA537E1B8CB8D300588024 /* WriteViewController.m in Sources */,
 				83466B4519E80CDD00566B8C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +385,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,9 +446,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				"CLANG_OPTIMIZATION_PROFILE_FILE[arch=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaodong zhang (CEVVC7TK7B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiaodong zhang (CEVVC7TK7B)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GQ3UYAW932;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "兔子的5s/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxun.zhangxiaodong;
+				PRODUCT_NAME = "BLE助手";
+				PROVISIONING_PROFILE = "a0e8b8fe-7ea4-49c8-bdba-465bd6691a5a";
+				PROVISIONING_PROFILE_SPECIFIER = ble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv6";
 			};
 			name = Debug;
 		};
@@ -353,9 +475,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaodong zhang (CEVVC7TK7B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiaodong zhang (CEVVC7TK7B)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "兔子的5s/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INSTALL_PATH = /Applications;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiaxun.zhangxiaodong;
+				PRODUCT_NAME = "BLE助手";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm64 armv6";
 			};
 			name = Release;
 		};
@@ -363,6 +501,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -373,6 +513,7 @@
 				);
 				INFOPLIST_FILE = "兔子的5sTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rabbit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/兔子的5s.app/兔子的5s";
 			};
@@ -382,12 +523,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "兔子的5sTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rabbit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/兔子的5s.app/兔子的5s";
 			};
@@ -412,6 +556,7 @@
 				83466B6419E80CDD00566B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83466B6519E80CDD00566B8C /* Build configuration list for PBXNativeTarget "兔子的5sTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +565,7 @@
 				83466B6719E80CDD00566B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

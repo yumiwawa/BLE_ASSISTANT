@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface WriteViewController : UIViewController
+- (IBAction)endEdit:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *myUITextField;
+@property (strong, nonatomic) IBOutlet UIButton *writeButton;
+
+- (IBAction)write:(id)sender;
 
 @end

@@ -10,4 +10,7 @@
 
 @interface ThridViewController : UIViewController
 
+@property (strong,nonatomic) NSMutableArray * cbcharacteristicList;
+@property (strong, nonatomic) IBOutlet UITableView *myThridTableView;
+@property(nonatomic,retain)NSString *type;
 @end

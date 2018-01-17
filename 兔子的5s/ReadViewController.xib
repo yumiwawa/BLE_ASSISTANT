@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReadViewController">
             <connections>
+                <outlet property="showValue" destination="nZ3-no-IRU" id="JsU-zt-AVg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +17,54 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nZ3-no-IRU">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="174" id="JdS-Zu-sgq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="JdS-Zu-sgq"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="JdS-Zu-sgq"/>
+                        </mask>
+                    </variation>
+                </textView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nZ3-no-IRU" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="H3K-AH-9br"/>
+                <constraint firstItem="nZ3-no-IRU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="QgV-Rc-0wG"/>
+                <constraint firstItem="nZ3-no-IRU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="118" id="ekR-nh-K8N"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="nZ3-no-IRU"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="H3K-AH-9br"/>
+                    <exclude reference="QgV-Rc-0wG"/>
+                    <exclude reference="ekR-nh-K8N"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="nZ3-no-IRU"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="H3K-AH-9br"/>
+                    <include reference="QgV-Rc-0wG"/>
+                    <include reference="ekR-nh-K8N"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="166" y="133"/>
         </view>
     </objects>
 </document>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowDataViewController">
             <connections>
+                <outlet property="myUiSwitch" destination="Urr-Un-qku" id="JXO-Gh-4St"/>
+                <outlet property="showdata" destination="QDv-Kd-jTe" id="UKC-j0-Rwp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,103 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-Kd-jTe">
+                    <rect key="frame" x="-22" y="53" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="600" id="dEl-Yr-jVS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dEl-Yr-jVS"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="0.0" y="123" width="388" height="600"/>
+                        <mask key="constraints">
+                            <include reference="dEl-Yr-jVS"/>
+                        </mask>
+                    </variation>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订阅特征" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPz-mH-MfK">
+                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="68" id="NYQ-3L-ftv"/>
+                        <constraint firstAttribute="height" constant="21" id="t9a-un-ID2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="NYQ-3L-ftv"/>
+                            <exclude reference="t9a-un-ID2"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="59" y="62" width="68" height="21"/>
+                        <mask key="constraints">
+                            <include reference="NYQ-3L-ftv"/>
+                            <include reference="t9a-un-ID2"/>
+                        </mask>
+                    </variation>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" translatesAutoresizingMaskIntoConstraints="NO" id="Urr-Un-qku">
+                    <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="196" y="57" width="51" height="31"/>
+                    </variation>
+                    <connections>
+                        <action selector="change:" destination="-1" eventType="valueChanged" id="81w-la-7yJ"/>
+                    </connections>
+                </switch>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kPz-mH-MfK" firstAttribute="centerY" secondItem="Urr-Un-qku" secondAttribute="centerY" id="Fd7-wN-4mi"/>
+                <constraint firstItem="QDv-Kd-jTe" firstAttribute="top" secondItem="Urr-Un-qku" secondAttribute="bottom" constant="35" id="KwO-LT-fuU"/>
+                <constraint firstAttribute="trailing" secondItem="QDv-Kd-jTe" secondAttribute="trailing" constant="6" id="M5b-K6-EMa"/>
+                <constraint firstItem="kPz-mH-MfK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="UFE-MO-c6A"/>
+                <constraint firstItem="Urr-Un-qku" firstAttribute="leading" secondItem="kPz-mH-MfK" secondAttribute="trailing" constant="10" id="msA-av-jna">
+                    <variation key="widthClass=compact" constant="46"/>
+                </constraint>
+                <constraint firstItem="QDv-Kd-jTe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nG3-fw-c3k"/>
+                <constraint firstItem="kPz-mH-MfK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="59" id="qQS-pW-5sD"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="kPz-mH-MfK"/>
+                    <exclude reference="Urr-Un-qku"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Fd7-wN-4mi"/>
+                    <exclude reference="UFE-MO-c6A"/>
+                    <exclude reference="qQS-pW-5sD"/>
+                    <exclude reference="KwO-LT-fuU"/>
+                    <exclude reference="M5b-K6-EMa"/>
+                    <exclude reference="nG3-fw-c3k"/>
+                    <exclude reference="msA-av-jna"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="kPz-mH-MfK"/>
+                    <include reference="Urr-Un-qku"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Fd7-wN-4mi"/>
+                    <include reference="UFE-MO-c6A"/>
+                    <include reference="qQS-pW-5sD"/>
+                    <include reference="KwO-LT-fuU"/>
+                    <include reference="M5b-K6-EMa"/>
+                    <include reference="nG3-fw-c3k"/>
+                    <include reference="msA-av-jna"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="283" y="314"/>
         </view>
     </objects>
 </document>

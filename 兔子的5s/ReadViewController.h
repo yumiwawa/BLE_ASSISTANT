@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AppDelegate.h"
+
 @interface ReadViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextView *showValue;
+
+@property(nonatomic,retain)NSString *type;
 
 @end

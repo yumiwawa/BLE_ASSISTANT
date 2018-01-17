@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AppDelegate.h"
 @interface ShowDataViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView *showdata;
+@property (strong, nonatomic) IBOutlet UISwitch *myUiSwitch;
+- (IBAction)change:(id)sender;
+@property(nonatomic,retain)NSString *type;
 @end

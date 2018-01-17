@@ -7,7 +7,7 @@
 //
 
 #import "WriteViewController.h"
-
+#import "AppDelegate.h"
 @interface WriteViewController ()
 
 @end
@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    self.navigationItem.title= delegate.selecedCBCharacteristic.UUID.description;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -25,13 +28,25 @@
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)endEdit:(id)sender {
+    [sender resignFirstResponder];
 }
-*/
-
+- (IBAction)write:(id)sender {
+    NSString *str=self.myUITextField.text;
+    NSData* adata = [str dataUsingEncoding:NSUTF8StringEncoding];
+        AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    [delegate.discoveredPeripheral writeValue:  adata forCharacteristic:delegate.selecedCBCharacteristic
+                                         type:CBCharacteristicWriteWithResponse];
+    [self.myUITextField setText:@""];
+    
+}
 @end

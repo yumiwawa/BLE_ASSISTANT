@@ -14,24 +14,25 @@
 
 @implementation MYViewController
 
-- (void)viewDidLoad {
+
+
+
+-(id)initWithNibName:(NSString *)nibNameOrNil
+              bundle:(NSBundle *)nibBundleOrNil
+{
+    if ([super initWithNibName:nibNameOrNil bundle:nibBundleOrNil] != nil)
+    {
+        // 为该控制器设置标签项
+        self.tabBarItem = [[UITabBarItem alloc]
+                           initWithTitle:@"作者信息"
+                           image:[UIImage imageNamed:@"rabbit.png"] tag:2];
+        //设置徽标
+        self.tabBarItem.badgeValue=@"牛";
+    }
+    return self;
+}
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

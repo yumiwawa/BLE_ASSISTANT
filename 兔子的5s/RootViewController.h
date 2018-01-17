@@ -1,3 +1,4 @@
+
 //
 //  RootViewController.h
 //  兔子的5s
@@ -7,7 +8,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
+#import "AppDelegate.h"
 @interface RootViewController : UIViewController
+
+ 
+@property (strong, nonatomic) CBCentralManager      *centralManager;
+ @property (strong, nonatomic) NSMutableData         *data;
+@property (strong, nonatomic) NSArray         *cb;
+@property (strong, nonatomic) CBPeripheral *cbperipheral;
+@property (strong,nonatomic) NSMutableArray * listData;
+@property (strong,nonatomic) NSMutableArray * cbperipheralList;
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end

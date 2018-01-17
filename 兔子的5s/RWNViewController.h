@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RWNViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UISegmentedControl *mySegmentedControl;
 
 @end

@@ -129,7 +129,12 @@
         
         // And connect
         NSLog(@"Connecting to peripheral %@", peripheral);
-        [_listData addObject:peripheral.name];
+        NSString *peripheralNmme=peripheral.name;
+        if([self isBlankString:peripheralNmme])
+        {
+            peripheralNmme=@"no named device";
+        }
+        [_listData addObject:peripheralNmme];
         [_cbperipheralList addObject:peripheral];
         [self.myTableView reloadData];
         //  [self.centralManager connectPeripheral:peripheral options:nil];
@@ -275,4 +280,25 @@
     //CGFloat就是float
     return 70.0;
 }
+-(BOOL) isBlankString:(NSString *)string {
+    
+       if (string == nil || string == NULL) {
+    
+               return YES;
+    
+            }
+    
+       if ([string isKindOfClass:[NSNull class]]) {
+        
+               return YES;
+        
+           }
+    
+        if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+        
+                return YES;
+        
+             }
+         return NO;
+    }
 @end

@@ -28,7 +28,7 @@
         // 为该控制器设置标签项
         self.tabBarItem = [[UITabBarItem alloc]
                            initWithTitle:@"BLE助手"
-                           image:[UIImage imageNamed:@"bluetooth.png"] tag:2];
+                           image:[UIImage imageNamed:@"ble.png"] tag:2];
         //      UITabBarItem* item = [[UITabBarItem alloc]
         //                              initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:1];
         ////        // 为标签项设置徽标
@@ -130,9 +130,10 @@
         // And connect
         NSLog(@"Connecting to peripheral %@", peripheral);
         NSString *peripheralNmme=peripheral.name;
+        NSLog(@"peripheralNmme %@", peripheralNmme);
         if([self isBlankString:peripheralNmme])
         {
-            peripheralNmme=@"no named device";
+            peripheralNmme=@"unNamed device";
         }
         [_listData addObject:peripheralNmme];
         [_cbperipheralList addObject:peripheral];

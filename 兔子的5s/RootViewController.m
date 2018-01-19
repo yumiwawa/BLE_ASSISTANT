@@ -230,7 +230,13 @@
     }
     
     NSLog(@"%@",str);
-    cell.textLabel.text=_cbperipheral.name;//设置文字
+    if([self isBlankString:_cbperipheral.name])
+    {
+     cell.textLabel.text=@"unNamed device";//设置文字;
+    }else
+    {
+          cell.textLabel.text=_cbperipheral.name;//设置文字
+    }
     //cell.textLabel.text=[_listData objectAtIndex:row];//设置文字
     cell.detailTextLabel.text=str; //
     //   NSLog(@"rabbit%@",cbperipheral.name);

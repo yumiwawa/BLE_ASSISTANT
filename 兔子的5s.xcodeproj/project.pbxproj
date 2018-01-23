@@ -26,12 +26,12 @@
 		83AA537A1B8C981800588024 /* RWNViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA53781B8C981800588024 /* RWNViewController.xib */; };
 		83AA537E1B8CB8D300588024 /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AA537C1B8CB8D300588024 /* WriteViewController.m */; };
 		83AA537F1B8CB8D300588024 /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA537D1B8CB8D300588024 /* WriteViewController.xib */; };
+		83C0ED832016E73100EA48F0 /* rabbit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C0ED7F2016E73000EA48F0 /* rabbit@2x.png */; };
+		83C0ED852016E73100EA48F0 /* ble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C0ED812016E73000EA48F0 /* ble@2x.png */; };
 		83C213B41C24694C0052A881 /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C213B21C24694C0052A881 /* MYViewController.m */; };
 		83C213B51C24694C0052A881 /* MYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C213B31C24694C0052A881 /* MYViewController.xib */; };
 		83C89A141A6FEE7B0001C2A6 /* ShowDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C89A121A6FEE7B0001C2A6 /* ShowDataViewController.m */; };
 		83C89A151A6FEE7B0001C2A6 /* ShowDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C89A131A6FEE7B0001C2A6 /* ShowDataViewController.xib */; };
-		83E803A220119F4300ACC7F0 /* ble.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E803A020119F4200ACC7F0 /* ble.png */; };
-		83E803A320119F4300ACC7F0 /* rabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E803A120119F4200ACC7F0 /* rabbit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,14 +76,14 @@
 		83AA537B1B8CB8D300588024 /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
 		83AA537C1B8CB8D300588024 /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
 		83AA537D1B8CB8D300588024 /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
+		83C0ED7F2016E73000EA48F0 /* rabbit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rabbit@2x.png"; path = "Resource/rabbit@2x.png"; sourceTree = SOURCE_ROOT; };
+		83C0ED812016E73000EA48F0 /* ble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ble@2x.png"; path = "Resource/ble@2x.png"; sourceTree = SOURCE_ROOT; };
 		83C213B11C24694C0052A881 /* MYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
 		83C213B21C24694C0052A881 /* MYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
 		83C213B31C24694C0052A881 /* MYViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYViewController.xib; sourceTree = "<group>"; };
 		83C89A111A6FEE7B0001C2A6 /* ShowDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDataViewController.h; sourceTree = "<group>"; };
 		83C89A121A6FEE7B0001C2A6 /* ShowDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDataViewController.m; sourceTree = "<group>"; };
 		83C89A131A6FEE7B0001C2A6 /* ShowDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDataViewController.xib; sourceTree = "<group>"; };
-		83E803A020119F4200ACC7F0 /* ble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ble.png; sourceTree = "<group>"; };
-		83E803A120119F4200ACC7F0 /* rabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rabbit.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,8 +245,8 @@
 		83E8039F20119EDF00ACC7F0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				83E803A020119F4200ACC7F0 /* ble.png */,
-				83E803A120119F4200ACC7F0 /* rabbit.png */,
+				83C0ED812016E73000EA48F0 /* ble@2x.png */,
+				83C0ED7F2016E73000EA48F0 /* rabbit@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -354,15 +354,15 @@
 			files = (
 				83466B4E19E80CDD00566B8C /* Main.storyboard in Resources */,
 				83C213B51C24694C0052A881 /* MYViewController.xib in Resources */,
-				83E803A320119F4300ACC7F0 /* rabbit.png in Resources */,
 				83466B5319E80CDD00566B8C /* LaunchScreen.xib in Resources */,
 				83AA53741B8C972C00588024 /* RootViewController.xib in Resources */,
 				83C89A151A6FEE7B0001C2A6 /* ShowDataViewController.xib in Resources */,
+				83C0ED832016E73100EA48F0 /* rabbit@2x.png in Resources */,
 				83AA536D1B8B3CF000588024 /* ReadViewController.xib in Resources */,
 				83466B5019E80CDD00566B8C /* Images.xcassets in Resources */,
+				83C0ED852016E73100EA48F0 /* ble@2x.png in Resources */,
 				83AA537A1B8C981800588024 /* RWNViewController.xib in Resources */,
 				83466B8119F5484D00566B8C /* SecondViewController.xib in Resources */,
-				83E803A220119F4300ACC7F0 /* ble.png in Resources */,
 				83AA53751B8C972C00588024 /* ThridViewController.xib in Resources */,
 				83AA537F1B8CB8D300588024 /* WriteViewController.xib in Resources */,
 			);

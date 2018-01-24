@@ -59,13 +59,13 @@
     _delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     _cbcharacteristicList=[NSMutableArray arrayWithObjects:
                            nil];
-    _delegate.discoveredPeripheral.delegate = self;
+    _delegate.connectedCBPeripheral.delegate = self;
     
-    [_delegate.discoveredPeripheral discoverCharacteristics:nil forService:_delegate.selectedCBService ];
+    [_delegate.connectedCBPeripheral discoverCharacteristics:nil forService:_delegate.selectedCBService ];
     
     
     
-    NSLog(@"discoveredPeripheral %@", _delegate.discoveredPeripheral.description );
+    NSLog(@"discoveredPeripheral %@", _delegate.connectedCBPeripheral.description );
     NSLog(@"selectedCBService %@", _delegate.selectedCBService.description );
     
     

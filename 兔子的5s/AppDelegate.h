@@ -18,7 +18,7 @@
 @property (strong, nonatomic) ViewController* viewController;
 @property (strong, nonatomic) UINavigationController *navController;
 @property (weak, nonatomic) CBCentralManager      *centralManager;
-@property (strong, nonatomic) CBPeripheral          *discoveredPeripheral;
+@property (strong, nonatomic) CBPeripheral          *connectedCBPeripheral;
 @property (strong, nonatomic) CBService      *selectedCBService;
 @property (strong, nonatomic) CBCharacteristic        *selecedCBCharacteristic;
 @property (strong, nonatomic) CBCharacteristic        *writeCBCharacteristic;

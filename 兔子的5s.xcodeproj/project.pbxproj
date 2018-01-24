@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830DE51120173E2800710DB5 /* ValidateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE51020173E2800710DB5 /* ValidateUtil.m */; };
+		830DE514201828D200710DB5 /* MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE513201828D200710DB5 /* MyUtils.m */; };
+		830DE51820186BD700710DB5 /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE51620186BD600710DB5 /* FeThreeDotGlow.m */; };
+		830DE51D20186C7E00710DB5 /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE51A20186C7E00710DB5 /* UIColor+flat.m */; };
+		830DE51E20186C7E00710DB5 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE51B20186C7E00710DB5 /* FXBlurView.m */; };
 		83466B4519E80CDD00566B8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B4419E80CDD00566B8C /* main.m */; };
 		83466B4819E80CDD00566B8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83466B4719E80CDD00566B8C /* AppDelegate.m */; };
 		83466B4E19E80CDD00566B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83466B4C19E80CDD00566B8C /* Main.storyboard */; };
@@ -45,6 +50,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		830DE50F20173E2700710DB5 /* ValidateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateUtil.h; sourceTree = "<group>"; };
+		830DE51020173E2800710DB5 /* ValidateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateUtil.m; sourceTree = "<group>"; };
+		830DE512201828D200710DB5 /* MyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUtils.h; sourceTree = "<group>"; };
+		830DE513201828D200710DB5 /* MyUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyUtils.m; sourceTree = "<group>"; };
+		830DE51620186BD600710DB5 /* FeThreeDotGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlow.m; sourceTree = "<group>"; };
+		830DE51720186BD700710DB5 /* FeThreeDotGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlow.h; sourceTree = "<group>"; };
+		830DE51920186C7E00710DB5 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		830DE51A20186C7E00710DB5 /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
+		830DE51B20186C7E00710DB5 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		830DE51C20186C7E00710DB5 /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
 		83466B3F19E80CDD00566B8C /* BLE助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83466B4319E80CDD00566B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83466B4419E80CDD00566B8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +119,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		830DE50E20173DBC00710DB5 /* 正则表达式 */ = {
+			isa = PBXGroup;
+			children = (
+				830DE50F20173E2700710DB5 /* ValidateUtil.h */,
+				830DE51020173E2800710DB5 /* ValidateUtil.m */,
+				830DE512201828D200710DB5 /* MyUtils.h */,
+				830DE513201828D200710DB5 /* MyUtils.m */,
+			);
+			name = "正则表达式";
+			sourceTree = "<group>";
+		};
+		830DE51520186B6900710DB5 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				830DE51920186C7E00710DB5 /* FXBlurView.h */,
+				830DE51B20186C7E00710DB5 /* FXBlurView.m */,
+				830DE51C20186C7E00710DB5 /* UIColor+flat.h */,
+				830DE51A20186C7E00710DB5 /* UIColor+flat.m */,
+				830DE51720186BD700710DB5 /* FeThreeDotGlow.h */,
+				830DE51620186BD600710DB5 /* FeThreeDotGlow.m */,
+			);
+			name = "动画";
+			sourceTree = "<group>";
+		};
 		83466B3619E80CDC00566B8C = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +164,8 @@
 		83466B4119E80CDD00566B8C /* 兔子的5s */ = {
 			isa = PBXGroup;
 			children = (
+				830DE51520186B6900710DB5 /* 动画 */,
+				830DE50E20173DBC00710DB5 /* 正则表达式 */,
 				83E8039F20119EDF00ACC7F0 /* Resource */,
 				83C213A91C2464610052A881 /* 我的 */,
 				83E9B0A91AD01F6400045E0F /* 刷新出服务特征 */,
@@ -386,13 +427,18 @@
 				839986F81A2B115E003BEA3C /* ViewController.m in Sources */,
 				83AA53791B8C981800588024 /* RWNViewController.m in Sources */,
 				83C89A141A6FEE7B0001C2A6 /* ShowDataViewController.m in Sources */,
+				830DE51D20186C7E00710DB5 /* UIColor+flat.m in Sources */,
+				830DE51E20186C7E00710DB5 /* FXBlurView.m in Sources */,
 				83466B8519F6C28D00566B8C /* ThridViewController.m in Sources */,
+				830DE51120173E2800710DB5 /* ValidateUtil.m in Sources */,
 				83466B8019F5484D00566B8C /* SecondViewController.m in Sources */,
 				83C213B41C24694C0052A881 /* MYViewController.m in Sources */,
 				83466B4819E80CDD00566B8C /* AppDelegate.m in Sources */,
 				83466B7819E814D500566B8C /* RootViewController.m in Sources */,
+				830DE51820186BD700710DB5 /* FeThreeDotGlow.m in Sources */,
 				83AA537E1B8CB8D300588024 /* WriteViewController.m in Sources */,
 				83466B4519E80CDD00566B8C /* main.m in Sources */,
+				830DE514201828D200710DB5 /* MyUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

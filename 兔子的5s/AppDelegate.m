@@ -16,7 +16,7 @@
 
 @implementation AppDelegate
 @synthesize    centralManager;
-@synthesize    discoveredPeripheral;
+@synthesize    connectedCBPeripheral;
 @synthesize    selectedCBService;
 @synthesize    selecedCBCharacteristic;
 

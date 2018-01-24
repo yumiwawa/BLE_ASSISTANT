@@ -11,15 +11,17 @@
 #import "SecondViewController.h"
 #import "ThridViewController.h"
 @interface RootViewController () <CBCentralManagerDelegate, CBPeripheralDelegate,UITableViewDataSource,UITableViewDelegate>
+@property (strong, nonatomic) FeThreeDotGlow *threeDot;
 @end
 
 @implementation RootViewController
 
 
 @synthesize cbperipheralList=_cbperipheralList;
-
-
-
+UIAlertController    *alert ;
+UIAlertAction * sureButton;
+bool  connected=false;
+int    count=0;
 -(id)initWithNibName:(NSString *)nibNameOrNil
               bundle:(NSBundle *)nibBundleOrNil
 {
@@ -77,18 +79,39 @@
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-    if (central.state != CBCentralManagerStatePoweredOn) {
+    if (central.state == CBManagerStatePoweredOn) {
         // In a real app, you'd deal with all the states correctly
+        if(alert!=nil)
+        {
+              [alert dismissViewControllerAnimated:YES completion:nil];
+        }
+         [self scan];
         return;
     }else
     {
-//        [_cbperipheralList removeAllObjects];
-//        [self.myTableView reloadData];
+        if(sureButton==nil)
+        {
+            sureButton= [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                if(alert!=nil)
+                {
+                    [alert dismissViewControllerAnimated:YES completion:nil];
+                }
+            }];
+        }
+        if(alert==nil)
+        {
+             alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"蓝牙已经关闭,请打开蓝牙继续使用该app" preferredStyle:  UIAlertControllerStyleAlert];
+          [alert addAction:sureButton];
+        }
+        [self presentViewController:alert animated:true completion:nil];
+        
+        [_cbperipheralList removeAllObjects];
+        [self.myTableView reloadData];
     }
     
     // The state must be CBCentralManagerStatePoweredOn...
     // ... so start scanning
-    [self scan];
+   
     
 }
 
@@ -99,6 +122,15 @@
 {
     [self.centralManager scanForPeripheralsWithServices:nil options:nil];
     NSLog(@"Scanning started");
+}
+
+-(void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error
+{
+    NSLog(@"%@",peripheral);
+    int rssi = abs([peripheral.RSSI intValue]);
+    CGFloat ci = (rssi - 49) / (10 * 4.);
+    NSString *length = [NSString stringWithFormat:@"发现BLT4.0热点:%@,距离:%.1fm",peripheral,pow(10,ci)];
+    NSLog(@"%@",length);
 }
 /** This callback comes whenever a peripheral that is advertising the TRANSFER_SERVICE_UUID is discovered.
  *  We check the RSSI, to make sure it's close enough that we're interested in it, and if it is,
@@ -115,25 +147,23 @@
     //    if (RSSI.integerValue < -35) {
     //        return;
     //    }
-    
-    NSLog(@"Discovered %@ at %@", peripheral.name, RSSI);
-   
     // Ok, it's in range - have we already seen it?
+     [peripheral discoverServices:nil];
     if ( ![_cbperipheralList containsObject:peripheral]) {
         //        NSString* p1 = peripheral.name;
         //        [_listData addObject:p1];
         //        [self.tableview reloadData];
-        
         // Save a local copy of the peripheral, so CoreBluetooth doesn't get rid of it
-        
-        
         // And connect
         NSLog(@"Connecting to peripheral %@", peripheral);
         NSString *peripheralNmme=peripheral.name;
         NSLog(@"peripheralNmme %@", peripheralNmme);
-        if([self isBlankString:peripheralNmme])
+        if([MyUtils isEmptyString:peripheralNmme])
         {
-            peripheralNmme=@"unNamed device";
+            peripheralNmme=@"unNamed";
+             NSLog(@"Discovered %@ at %@", @"unNamed", RSSI);
+        }else{
+             NSLog(@"Discovered %@ at %@", peripheral.name, RSSI);
         }
         [_listData addObject:peripheralNmme];
         [_cbperipheralList addObject:peripheral];
@@ -170,21 +200,23 @@
     // Search only for services that match our UUID
     //    [peripheral discoverServices:@[[CBUUID UUIDWithString:@"D0611E78-BBB4-4591-A5F8-487910AE4366"]]];
     //[peripheral discoverServices:nil];
-    SecondViewController *nv = [[SecondViewController alloc]init];
- //  nv.type=_cbperipheral.name;
-    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
-    temporaryBarButtonItem.title = _cbperipheral.name;
-    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
-   // [temporaryBarButtonItem release];
- // self.navigationItem.backBarButtonItem.title = _cbperipheral.name;
-    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-    
-    delegate.discoveredPeripheral=_cbperipheral;
-    [self.navigationController pushViewController:nv animated:NO];
-    
+//    SecondViewController *nv = [[SecondViewController alloc]init];
+// //  nv.type=_cbperipheral.name;
+//    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+//    temporaryBarButtonItem.title = _cbperipheral.name;
+//    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+//   // [temporaryBarButtonItem release];
+// // self.navigationItem.backBarButtonItem.title = _cbperipheral.name;
+  AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];    delegate.connectedCBPeripheral=peripheral;
+//    [self.navigationController pushViewController:nv animated:NO];
+    connected=true;
 }
 
 
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error
+{
+    
+}
 
 
 //下面都是实现UITableViewDelegate,UITableViewDataSource两个协议中定义的方法
@@ -208,7 +240,6 @@
     NSString * tableIdentifier=@"Simple table";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tableIdentifier];
     //当一行上滚在屏幕消失时，另一行从屏幕底部滚到屏幕上，如果新行可以直接使用已经滚出屏幕的那行，系统可以避免重新创建和释放视图，同一个TableView,所有的行都是可以复用的，tableIdentifier是用来区别是否属于同一TableView
-    
     if(cell==nil)
     {
         //当没有可复用的空闲的cell资源时(第一次载入,没翻页)
@@ -217,34 +248,38 @@
         //UITableViewCellStyleSubtitle 可以显示一张图片，两个字符串，上面黑色，下面的灰色
         //UITableViewCellStyleValue1 可以显示一张图片，两个字符串，左边的黑色，右边的灰色
         //UITableViewCellStyleValue2 可以显示两个字符串，左边的灰色，右边的黑色
-        
     }
-    
-    
+
     _cbperipheral=[_cbperipheralList objectAtIndex:row];
-    NSMutableString *str=[[NSMutableString alloc]initWithString:@"UUID:"];
+//    NSArray *services=_cbperipheral.services;
+//    NSUInteger num=services.count ;
+//    NSMutableString *str = [NSMutableString stringWithFormat:@"%lu",(unsigned long)num];
+//    [str  appendString:@"services"];
+    
+    NSMutableString *str = [NSMutableString stringWithString:@"UUID:"];
     if(_cbperipheral!=nil)
     {
-        
         [str  appendString:_cbperipheral.identifier.UUIDString];
     }
-    
     NSLog(@"%@",str);
-    if([self isBlankString:_cbperipheral.name])
+    if([MyUtils isEmptyString:_cbperipheral.name])
     {
-     cell.textLabel.text=@"unNamed device";//设置文字;
+     cell.textLabel.text=@"unNamed";//设置文字;
+     cell.textLabel.textColor = [UIColor grayColor];
+    cell.detailTextLabel.textColor = [UIColor grayColor];
     }else
     {
-          cell.textLabel.text=_cbperipheral.name;//设置文字
+    cell.textLabel.text=_cbperipheral.name;//设置文字
     }
     //cell.textLabel.text=[_listData objectAtIndex:row];//设置文字
     cell.detailTextLabel.text=str; //
     //   NSLog(@"rabbit%@",cbperipheral.name);
     
-    UIImage *image=[UIImage imageNamed:@"qq"];//读取图片,无需扩展名
+    UIImage *image=[UIImage imageNamed:@"ble.png"];//读取图片,无需扩展名
     cell.imageView.image=image;//文字左边的图片
-    
-    
+    //设置箭头
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+//    [cell.detailTextLabel setNumberOfLines:2];//可以显示3行
     //适用于Subtitle，Value1，Value2样式
     //    cell.imageView.highlightedImage=image; 可以定义被选中后显示的图片
     return cell;
@@ -262,6 +297,8 @@
     _cbperipheral=[_cbperipheralList objectAtIndex:row];
     
     [self.centralManager connectPeripheral:_cbperipheral options:nil];
+    NSLog(@"点击了选中");
+    [self addAni];
     // NSString *rowString = [_listData objectAtIndex:[indexPath row]];
     //    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"选中的行信息" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     //    [alter show];
@@ -273,9 +310,7 @@
     //                                                     ]] forService:cbc];
     //    NSLog(@"count %@", cbc);
     //   [_discoveredPeripheral discoverCharacteristics:nil
-    
     //                                       forService:cbc];
-    
     //   [peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:@"2A29"]] forService:service];
     //    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"选中的行信息" message:@"hello world" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     //    [alter show];
@@ -287,25 +322,44 @@
     //CGFloat就是float
     return 70.0;
 }
--(BOOL) isBlankString:(NSString *)string {
+-(void )addAni
+{
     
-       if (string == nil || string == NULL) {
-    
-               return YES;
-    
-            }
-    
-       if ([string isKindOfClass:[NSNull class]]) {
-        
-               return YES;
-        
-           }
-    
-        if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
-        
-                return YES;
-        
-             }
-         return NO;
+    if(_threeDot==nil)
+    {
+       _threeDot = [[FeThreeDotGlow alloc] initWithView:self.view blur:NO];
+      _threeDot.fontTitleLabel = [UIFont systemFontOfSize:20];
     }
+    NSMutableString *deviceName = [NSMutableString stringWithString:@"正在连接"];
+    if(_cbperipheral!=nil)
+    {
+        [deviceName  appendString:_cbperipheral.name];
+    }
+    _threeDot.titleLabelText = deviceName;
+  //  _threeDot = [[FeThreeDotGlow alloc] initWithView:self.view blur:NO];
+    [self.view addSubview:_threeDot];
+    // Start
+    [_threeDot showWhileExecutingBlock:^{
+        while (!connected&&count<4) {
+           sleep(1);
+            count++;
+        }
+    } completion:^{
+        if(connected)
+        {
+            connected=false;
+            [_threeDot removeFromSuperview];
+            SecondViewController *nv = [[SecondViewController alloc]init];
+            //  nv.type=_cbperipheral.name;
+            UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+            temporaryBarButtonItem.title = _cbperipheral.name;
+            self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+            [self.navigationController pushViewController:nv animated:NO];
+        }else{
+              [_threeDot removeFromSuperview];
+        }
+        count=0;
+        }
+       ];
+}
 @end

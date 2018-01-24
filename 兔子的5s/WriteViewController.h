@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ValidateUtil.h"
+#import "MyUtils.h"
 @interface WriteViewController : UIViewController
 - (IBAction)endEdit:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *myUITextField;

@@ -20,8 +20,8 @@
     [super viewDidLoad];
   
     AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-    delegate.discoveredPeripheral.delegate = self;
-    [delegate.discoveredPeripheral readValueForCharacteristic:delegate.selecedCBCharacteristic  ];
+    delegate.connectedCBPeripheral.delegate = self;
+    [delegate.connectedCBPeripheral readValueForCharacteristic:delegate.selecedCBCharacteristic  ];
     
     self.navigationItem.title= delegate.selecedCBCharacteristic.UUID.description;
     

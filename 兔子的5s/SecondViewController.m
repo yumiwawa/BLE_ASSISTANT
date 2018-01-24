@@ -33,9 +33,6 @@
 {
     ThridViewController *thridView = [[ThridViewController alloc] init];
     [self.navigationController pushViewController:thridView animated:YES];
-    
-    
-    
 }
 
 - (void)viewDidLoad {
@@ -50,9 +47,9 @@
     _delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     _cbserviceList=[NSMutableArray arrayWithObjects:
                     nil];
-    _delegate.discoveredPeripheral.delegate = self;
-    NSLog(@"Error discovering services: %@", _delegate.discoveredPeripheral.description );
-    [_delegate.discoveredPeripheral discoverServices:nil];
+    _delegate.connectedCBPeripheral.delegate = self;
+    NSLog(@"Error discovering services: %@", _delegate.connectedCBPeripheral.description );
+    [_delegate.connectedCBPeripheral discoverServices:nil];
   
 }
 
@@ -84,7 +81,7 @@
     //    [self.tableview reloadData];
     
     // Loop through the newly filled peripheral.services array, just in case there's more than one.
-    for (CBService *service in _delegate.discoveredPeripheral.services) {
+    for (CBService *service in _delegate.connectedCBPeripheral.services) {
         
         //[self.label2 setText:(NSString *)service.UUID];
         NSLog(@"Discovered service %@", service.UUID.description);

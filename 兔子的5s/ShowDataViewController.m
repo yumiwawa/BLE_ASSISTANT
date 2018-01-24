@@ -33,8 +33,8 @@
     // self.textview.delegate = self;//设置它的委托方法
     
     _delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-    _discoveredPeripheral=_delegate.discoveredPeripheral;
-    _delegate.discoveredPeripheral.delegate = self;
+    _discoveredPeripheral=_delegate.connectedCBPeripheral;
+    _delegate.connectedCBPeripheral.delegate = self;
     self.navigationItem.title= _delegate.selecedCBCharacteristic.UUID.description;
     
     _selecedCBCharacteristic=_delegate.selecedCBCharacteristic;

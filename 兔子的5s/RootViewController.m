@@ -295,10 +295,13 @@ int    count=0;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSUInteger row=[indexPath row];
     _cbperipheral=[_cbperipheralList objectAtIndex:row];
-    
-    [self.centralManager connectPeripheral:_cbperipheral options:nil];
-    NSLog(@"点击了选中");
-    [self addAni];
+    //设备名字不为空才连接
+    if(![MyUtils isEmptyString:_cbperipheral.name])
+    {
+        [self.centralManager connectPeripheral:_cbperipheral options:nil];
+        NSLog(@"点击了选中");
+        [self addAni];
+    }
     // NSString *rowString = [_listData objectAtIndex:[indexPath row]];
     //    UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"选中的行信息" message:rowString delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     //    [alter show];

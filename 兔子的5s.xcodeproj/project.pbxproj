@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830CE95F201989AC00FC06AF /* ble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830CE95D201989AC00FC06AF /* ble@2x.png */; };
+		830CE960201989AC00FC06AF /* rabbit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830CE95E201989AC00FC06AF /* rabbit@2x.png */; };
 		830DE51120173E2800710DB5 /* ValidateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE51020173E2800710DB5 /* ValidateUtil.m */; };
 		830DE514201828D200710DB5 /* MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE513201828D200710DB5 /* MyUtils.m */; };
 		830DE51820186BD700710DB5 /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DE51620186BD600710DB5 /* FeThreeDotGlow.m */; };
@@ -31,8 +33,6 @@
 		83AA537A1B8C981800588024 /* RWNViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA53781B8C981800588024 /* RWNViewController.xib */; };
 		83AA537E1B8CB8D300588024 /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AA537C1B8CB8D300588024 /* WriteViewController.m */; };
 		83AA537F1B8CB8D300588024 /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AA537D1B8CB8D300588024 /* WriteViewController.xib */; };
-		83C0ED832016E73100EA48F0 /* rabbit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C0ED7F2016E73000EA48F0 /* rabbit@2x.png */; };
-		83C0ED852016E73100EA48F0 /* ble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C0ED812016E73000EA48F0 /* ble@2x.png */; };
 		83C213B41C24694C0052A881 /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C213B21C24694C0052A881 /* MYViewController.m */; };
 		83C213B51C24694C0052A881 /* MYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C213B31C24694C0052A881 /* MYViewController.xib */; };
 		83C89A141A6FEE7B0001C2A6 /* ShowDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C89A121A6FEE7B0001C2A6 /* ShowDataViewController.m */; };
@@ -50,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		830CE95D201989AC00FC06AF /* ble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ble@2x.png"; sourceTree = "<group>"; };
+		830CE95E201989AC00FC06AF /* rabbit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rabbit@2x.png"; sourceTree = "<group>"; };
 		830DE50F20173E2700710DB5 /* ValidateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateUtil.h; sourceTree = "<group>"; };
 		830DE51020173E2800710DB5 /* ValidateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateUtil.m; sourceTree = "<group>"; };
 		830DE512201828D200710DB5 /* MyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUtils.h; sourceTree = "<group>"; };
@@ -91,8 +93,6 @@
 		83AA537B1B8CB8D300588024 /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
 		83AA537C1B8CB8D300588024 /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
 		83AA537D1B8CB8D300588024 /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
-		83C0ED7F2016E73000EA48F0 /* rabbit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rabbit@2x.png"; path = "Resource/rabbit@2x.png"; sourceTree = SOURCE_ROOT; };
-		83C0ED812016E73000EA48F0 /* ble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ble@2x.png"; path = "Resource/ble@2x.png"; sourceTree = SOURCE_ROOT; };
 		83C213B11C24694C0052A881 /* MYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
 		83C213B21C24694C0052A881 /* MYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
 		83C213B31C24694C0052A881 /* MYViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYViewController.xib; sourceTree = "<group>"; };
@@ -286,8 +286,8 @@
 		83E8039F20119EDF00ACC7F0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				83C0ED812016E73000EA48F0 /* ble@2x.png */,
-				83C0ED7F2016E73000EA48F0 /* rabbit@2x.png */,
+				830CE95D201989AC00FC06AF /* ble@2x.png */,
+				830CE95E201989AC00FC06AF /* rabbit@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -397,11 +397,11 @@
 				83C213B51C24694C0052A881 /* MYViewController.xib in Resources */,
 				83466B5319E80CDD00566B8C /* LaunchScreen.xib in Resources */,
 				83AA53741B8C972C00588024 /* RootViewController.xib in Resources */,
+				830CE960201989AC00FC06AF /* rabbit@2x.png in Resources */,
 				83C89A151A6FEE7B0001C2A6 /* ShowDataViewController.xib in Resources */,
-				83C0ED832016E73100EA48F0 /* rabbit@2x.png in Resources */,
 				83AA536D1B8B3CF000588024 /* ReadViewController.xib in Resources */,
+				830CE95F201989AC00FC06AF /* ble@2x.png in Resources */,
 				83466B5019E80CDD00566B8C /* Images.xcassets in Resources */,
-				83C0ED852016E73100EA48F0 /* ble@2x.png in Resources */,
 				83AA537A1B8C981800588024 /* RWNViewController.xib in Resources */,
 				83466B8119F5484D00566B8C /* SecondViewController.xib in Resources */,
 				83AA53751B8C972C00588024 /* ThridViewController.xib in Resources */,
@@ -524,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -569,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -590,7 +590,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "兔子的5s/Info.plist";
 				INSTALL_PATH = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_MAP_FILE_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
@@ -600,6 +600,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = ble_development;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv6";
 			};
@@ -619,7 +620,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "兔子的5s/Info.plist";
 				INSTALL_PATH = /Applications;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_MAP_FILE_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
@@ -629,6 +630,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = ble_distribution;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 arm64 armv6";
 			};

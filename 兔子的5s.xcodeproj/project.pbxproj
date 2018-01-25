@@ -119,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		830CE9632019B6E600FC06AF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				830CE95D201989AC00FC06AF /* ble@2x.png */,
+				830CE95E201989AC00FC06AF /* rabbit@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		830DE50E20173DBC00710DB5 /* 正则表达式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				83466B4119E80CDD00566B8C /* 兔子的5s */,
+				83E8039F20119EDF00ACC7F0 /* Resource */,
 				83466B5B19E80CDD00566B8C /* 兔子的5sTests */,
 				83466B4019E80CDD00566B8C /* Products */,
 			);
@@ -166,7 +176,6 @@
 			children = (
 				830DE51520186B6900710DB5 /* 动画 */,
 				830DE50E20173DBC00710DB5 /* 正则表达式 */,
-				83E8039F20119EDF00ACC7F0 /* Resource */,
 				83C213A91C2464610052A881 /* 我的 */,
 				83E9B0A91AD01F6400045E0F /* 刷新出服务特征 */,
 				83466B4C19E80CDD00566B8C /* Main.storyboard */,
@@ -286,8 +295,7 @@
 		83E8039F20119EDF00ACC7F0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				830CE95D201989AC00FC06AF /* ble@2x.png */,
-				830CE95E201989AC00FC06AF /* rabbit@2x.png */,
+				830CE9632019B6E600FC06AF /* images */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
